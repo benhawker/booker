@@ -1,1 +1,1 @@
-***
+Small Ruby application using Watir to automate bookings online.
