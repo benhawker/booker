@@ -77,6 +77,8 @@ class Booking
 
     # Logout - end session.
     browser.link(text: 'Log Out').click
+
+    puts "Complete - session booked"
   end
 
   # def self.browser

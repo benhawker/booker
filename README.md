@@ -1,6 +1,6 @@
 Small Ruby application using Watir to automate bookings online.
 
-heroku buildpacks:add --index 2 https://github.com/heroku/heroku-buildpack-chromedriver.git -a bisham-booker
-heroku buildpacks:add --index 3 https://github.com/heroku/heroku-buildpack-google-chrome.git -a bisham-booker
-heroku buildpacks:add --index 4 https://github.com/stomita/heroku-buildpack-phantomjs.git -a bisham-booker
+https://github.com/jormon/minimal-chrome-on-heroku
 
+heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-google-chrome.git -a bisham-booker
+heroku buildpacks:add --index 2 https://github.com/heroku/ruby.git -a bisham-booker
