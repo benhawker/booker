@@ -1,5 +1,6 @@
 require 'watir'
-require "fileutils"
+require 'fileutils'
+require 'pry'
 
 class Booking
 
@@ -11,6 +12,9 @@ class Booking
   # the following times at the following elements in
   # the links array stored belows.
   TIME_ELEMENT_MAP = {
+    "16:00": -7,
+    "17:00": -6,
+    "18:00": -5,
     "19:00": -4,
     "20:00": -3,
     "21:00": -2
