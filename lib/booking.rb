@@ -38,10 +38,19 @@ class Booking
     # Click View Timetable button
     browser.button(id: "bottomsubmit").click
 
+    # Wait for js.
+    sleep 3
+
+    puts "Trying to find iframe"
+
     # Return a collection of all availabilities
     links = browser.iframe(id: "TB_iframeContent").div(id: "resultUpdate").div(id: "resultContainer").links(:text => /Available/)
+    
+    puts "Found iframe"
+    puts links
 
     # Narrow to the links that we will consider booking (i.e. 19:00, 20:00 or 21:00).
+    # On a weekday links -1 is 22:00 which is 'available' but isa useless slot.
     links[-4..-2].each do |time|
       time_string = time.parent.text.split("\n")[1].to_s
 
@@ -51,8 +60,11 @@ class Booking
       end
     end
 
+    puts "we have now clicked the required time"
     # Wait for js.
-    sleep 2
+    sleep 10
+
+    puts "Trying to find nested iframe"
 
     # Click ok to confirm booking.
     browser.iframe(id: "TB_iframeContent").iframe(id: "TB_iframeContent").links.last.click
@@ -71,7 +83,7 @@ class Booking
   #   @browser ||= Watir::Browser.new
   # end
 
-   def self.browser
+  def self.browser
     options = Selenium::WebDriver::Chrome::Options.new
 
     # make a directory for chrome if it doesn't already exist
