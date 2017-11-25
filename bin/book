@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/booking'
+
+Booking.book!("20:00")
