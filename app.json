@@ -1,0 +1,19 @@
+{
+  "name": "Google Chrome on Heroku for a booking",
+  "description": "This app sets up headless chrome running on watir on heroku to make a booking.",
+  "keywords": [
+    "scraping",
+    "headless chrome",
+    "watir"
+  ],
+  "repository": "https://github.com/benhawker/booker",
+  "stack": "heroku-16",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
