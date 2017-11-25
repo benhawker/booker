@@ -67,6 +67,6 @@ class Booking
   end
 
   def self.browser
-    @browser ||= Watir::Browser.new
+    @browser ||= Watir::Browser.new(:phantomjs)
   end
 end
