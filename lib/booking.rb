@@ -1,4 +1,5 @@
 require 'watir'
+require "fileutils"
 
 class Booking
 
