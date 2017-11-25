@@ -1,7 +1,4 @@
 require 'watir'
-require "dotenv"
-
-Dotenv.load!
 
 class Booking
 
